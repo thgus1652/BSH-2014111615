@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vSv-p7-6U0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ao3-mi-6Dr">
+            <objects>
+                <viewController id="soE-UZ-N6h" customClass="KGViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hTk-mw-5B9"/>
+                        <viewControllerLayoutGuide type="bottom" id="oW9-KN-i9d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ux2-lE-YZV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQN-qc-cFX">
+                                <rect key="frame" x="256" y="114" width="30" height="30"/>
+                                <state key="normal" title="보기"/>
+                                <connections>
+                                    <action selector="getValue" destination="soE-UZ-N6h" eventType="touchUpInside" id="y4M-K4-SmW"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EyL-7e-jZd">
+                                <rect key="frame" x="7" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wcj-5m-2wN">
+                                <rect key="frame" x="110" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9YT-Ws-Nma">
+                                <rect key="frame" x="213" y="206" width="100" height="86"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7F-du-SWs">
+                                <rect key="frame" x="18" y="300" width="285" height="160"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCR-KE-5S7">
+                                <rect key="frame" x="0.0" y="64" width="216" height="129"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="soE-UZ-N6h" id="F8S-VP-HiG"/>
+                                    <outlet property="delegate" destination="soE-UZ-N6h" id="SPK-D2-4vL"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView1" destination="EyL-7e-jZd" id="8fb-1x-iGR"/>
+                        <outlet property="imageView2" destination="Wcj-5m-2wN" id="j9d-Ua-Qfi"/>
+                        <outlet property="imageView3" destination="9YT-Ws-Nma" id="2yo-O1-gh6"/>
+                        <outlet property="label" destination="Y7F-du-SWs" id="Duv-ha-Cgn"/>
+                        <outlet property="picker" destination="nCR-KE-5S7" id="LEh-Wj-KSg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="utV-fE-Xg0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="187" y="-814"/>
+        </scene>
+        <!--놀러갈래?-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWc-1j-ZiN">
+                                <rect key="frame" x="91" y="263" width="74" height="62"/>
+                                <state key="normal" title="Button" image="junrabook.png"/>
+                                <connections>
+                                    <segue destination="ZLa-Dh-u9D" kind="show" identifier="jbView" id="2ta-Gn-hE9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7k-c8-Wyx">
+                                <rect key="frame" x="63" y="110" width="106" height="90"/>
+                                <state key="normal" title="Button" image="seoul.png"/>
+                                <connections>
+                                    <segue destination="soE-UZ-N6h" kind="show" identifier="kgView" id="zmk-vh-k8f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAr-xh-wyO">
+                                <rect key="frame" x="139" y="78" width="121" height="107"/>
+                                <state key="normal" title="Button" image="gang.png"/>
+                                <connections>
+                                    <segue destination="d0x-yO-ciA" kind="show" identifier="kwView" id="UiO-zS-LkV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVa-ZF-M6F">
+                                <rect key="frame" x="71" y="187" width="89" height="91"/>
+                                <state key="normal" title="Button" image="chungnam.png"/>
+                                <connections>
+                                    <segue destination="44O-fu-EPC" kind="show" identifier="cnView" id="HbF-6L-jAA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jX-0s-am6">
+                                <rect key="frame" x="132" y="174" width="85" height="95"/>
+                                <state key="normal" title="Button" image="chungbook.png"/>
+                                <connections>
+                                    <segue destination="1vo-hQ-Xo9" kind="show" identifier="cbView" id="qir-mw-KK0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llI-RO-3mO">
+                                <rect key="frame" x="185" y="188" width="92" height="107"/>
+                                <state key="normal" title="Button" image="gyungbook.png"/>
+                                <connections>
+                                    <segue destination="N9y-fM-xfo" kind="show" identifier="kbView" id="8qT-lW-opS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJm-Md-dpT">
+                                <rect key="frame" x="157" y="277" width="111" height="91"/>
+                                <state key="normal" title="Button" image="gyungnam.png"/>
+                                <connections>
+                                    <segue destination="4mJ-qA-zHF" kind="show" identifier="knView" id="zeh-uj-hgd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytM-Qs-kb8">
+                                <rect key="frame" x="65" y="418" width="73" height="42"/>
+                                <state key="normal" title="Button" image="jeju.png"/>
+                                <connections>
+                                    <segue destination="rQa-Q8-x2O" kind="show" identifier="jjView" id="l3T-yp-jrO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38A-ta-15f">
+                                <rect key="frame" x="248" y="424" width="47" height="30"/>
+                                <state key="normal" title="adding">
+                                    <color key="titleColor" red="1" green="0.72166760109999994" blue="0.60660748659999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="oOI-Hi-Oin" kind="show" identifier="addView" id="SQV-GB-6YW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHm-cO-0gI">
+                                <rect key="frame" x="55" y="318" width="110" height="65"/>
+                                <state key="normal" title="Button" image="junranam.png"/>
+                                <connections>
+                                    <segue destination="MbB-lz-FcL" kind="show" identifier="jnView" id="85J-qh-Oxu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99785786290322576" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="놀러갈래?" id="8dI-dC-Cxg"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="100"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jj9-tA-yeA">
+            <objects>
+                <viewController id="4mJ-qA-zHF" customClass="KNViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JR4-x1-nZ5"/>
+                        <viewControllerLayoutGuide type="bottom" id="jPq-Y4-IJO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="se2-Bq-fKT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dox-N9-800">
+                                <rect key="frame" x="0.0" y="64" width="216" height="129"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4mJ-qA-zHF" id="9SX-Tx-RF7"/>
+                                    <outlet property="delegate" destination="4mJ-qA-zHF" id="mf3-qu-K3h"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft2-v4-bxt">
+                                <rect key="frame" x="253" y="114" width="30" height="30"/>
+                                <state key="normal" title="보기"/>
+                                <connections>
+                                    <action selector="getValue" destination="4mJ-qA-zHF" eventType="touchUpInside" id="9ds-RV-bgS"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jDe-GH-BRv">
+                                <rect key="frame" x="7" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYY-YD-Oif">
+                                <rect key="frame" x="110" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bP4-Lj-XNO">
+                                <rect key="frame" x="213" y="206" width="100" height="86"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZJ-6g-cdR">
+                                <rect key="frame" x="20" y="300" width="285" height="160"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView1" destination="jDe-GH-BRv" id="Bvo-me-Six"/>
+                        <outlet property="imageView2" destination="cYY-YD-Oif" id="dMG-Kr-4vk"/>
+                        <outlet property="imageView3" destination="bP4-Lj-XNO" id="PQx-Te-evi"/>
+                        <outlet property="label" destination="TZJ-6g-cdR" id="Mfx-4U-IFX"/>
+                        <outlet property="picker" destination="dox-N9-800" id="jJl-eL-idx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SJx-kY-AZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047" y="1018"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="sh7-j3-36W">
+            <objects>
+                <viewController id="oOI-Hi-Oin" customClass="AddViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nfj-0c-12F"/>
+                        <viewControllerLayoutGuide type="bottom" id="fu9-vo-flY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HFx-j2-Kcc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddz-1m-s3u">
+                                <rect key="frame" x="381" y="84" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="App-OT-87z">
+                                <rect key="frame" x="20" y="317" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsW-qX-u3W">
+                                <rect key="frame" x="5" y="72" width="300" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="제출하실 여행지를 적어주세요." textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-UK-Dri">
+                                <rect key="frame" x="15" y="159" width="285" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oOI-Hi-Oin" id="mSG-TO-zVA"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="label1" destination="xsW-qX-u3W" id="5N2-Y0-6Od"/>
+                        <outlet property="label2" destination="App-OT-87z" id="kaz-Oi-NNQ"/>
+                        <outlet property="textField" destination="sfr-UK-Dri" id="CnO-4j-WfC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rDc-JM-N61" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1287" y="656"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UJ6-9T-B18">
+            <objects>
+                <viewController id="rQa-Q8-x2O" customClass="JJViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Mj-Ds-ZU9"/>
+                        <viewControllerLayoutGuide type="bottom" id="uGS-zn-sv9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EIq-DD-ZKk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MS0-Fi-Cpr">
+                                <rect key="frame" x="257" y="118" width="30" height="30"/>
+                                <state key="normal" title="보기"/>
+                                <connections>
+                                    <action selector="getValue" destination="rQa-Q8-x2O" eventType="touchUpInside" id="17X-b8-JAg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lc-8b-SWd">
+                                <rect key="frame" x="7" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="41Y-8v-GlR">
+                                <rect key="frame" x="110" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TkA-g7-sD8">
+                                <rect key="frame" x="213" y="206" width="100" height="86"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcR-oa-gcU">
+                                <rect key="frame" x="15" y="300" width="285" height="160"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fXy-ei-Vje">
+                                <rect key="frame" x="0.0" y="64" width="216" height="129"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="rQa-Q8-x2O" id="tLv-vi-0yJ"/>
+                                    <outlet property="delegate" destination="rQa-Q8-x2O" id="CVp-ye-ldU"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView1" destination="6lc-8b-SWd" id="5XA-me-c9j"/>
+                        <outlet property="imageView2" destination="41Y-8v-GlR" id="tSs-tE-MWj"/>
+                        <outlet property="imageView3" destination="TkA-g7-sD8" id="q6L-9r-zDp"/>
+                        <outlet property="label" destination="pcR-oa-gcU" id="KTe-XI-sZL"/>
+                        <outlet property="picker" destination="fXy-ei-Vje" id="3Bz-6D-4Tj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TfJ-iN-coh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384" y="930"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hgT-p4-0Ur">
+            <objects>
+                <viewController id="MbB-lz-FcL" customClass="JNViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0P3-Bd-8aY"/>
+                        <viewControllerLayoutGuide type="bottom" id="awC-pc-6oB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7bH-vf-0BU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XaQ-1z-KaB">
+                                <rect key="frame" x="0.0" y="64" width="216" height="129"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MbB-lz-FcL" id="b5d-mD-cC1"/>
+                                    <outlet property="delegate" destination="MbB-lz-FcL" id="r24-wE-a1W"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyR-bc-FgQ">
+                                <rect key="frame" x="259" y="116" width="30" height="30"/>
+                                <state key="normal" title="보기"/>
+                                <connections>
+                                    <action selector="getValue" destination="rQa-Q8-x2O" eventType="touchUpInside" id="51f-WT-ZLG"/>
+                                    <action selector="getValue" destination="MbB-lz-FcL" eventType="touchUpInside" id="Aak-HF-FRO"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQw-OO-uw7">
+                                <rect key="frame" x="7" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZH0-nj-PFm">
+                                <rect key="frame" x="110" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WaO-Mv-cAz">
+                                <rect key="frame" x="213" y="206" width="100" height="86"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqc-1f-w7b">
+                                <rect key="frame" x="18" y="300" width="285" height="160"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView1" destination="GQw-OO-uw7" id="Pgh-xd-KwS"/>
+                        <outlet property="imageView2" destination="ZH0-nj-PFm" id="D4I-q7-aTt"/>
+                        <outlet property="imageView3" destination="WaO-Mv-cAz" id="4oZ-L4-hps"/>
+                        <outlet property="label" destination="Dqc-1f-w7b" id="jYy-nO-RP4"/>
+                        <outlet property="picker" destination="XaQ-1z-KaB" id="89O-Ip-GbX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RUB-52-mzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="930"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DGh-Qn-LmX">
+            <objects>
+                <viewController id="d0x-yO-ciA" customClass="KWViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dyl-Sq-lMM"/>
+                        <viewControllerLayoutGuide type="bottom" id="baf-Mb-ldC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iFk-Bz-zct">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWI-k0-el6">
+                                <rect key="frame" x="6" y="207" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sEf-y6-hRK">
+                                <rect key="frame" x="214" y="207" width="100" height="86"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eMM-kk-MGB">
+                                <rect key="frame" x="0.0" y="64" width="216" height="129"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="d0x-yO-ciA" id="CBc-EU-gXW"/>
+                                    <outlet property="delegate" destination="d0x-yO-ciA" id="r0w-P9-BPS"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avi-kS-e6h">
+                                <rect key="frame" x="255" y="114" width="30" height="30"/>
+                                <state key="normal" title="보기"/>
+                                <connections>
+                                    <action selector="getValue" destination="d0x-yO-ciA" eventType="touchUpInside" id="Ae6-95-4dy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oeg-Lx-kr9">
+                                <rect key="frame" x="18" y="301" width="285" height="160"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0x-ZM-lsc">
+                                <rect key="frame" x="110" y="207" width="100" height="86"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView1" destination="PWI-k0-el6" id="FQb-kQ-U1Y"/>
+                        <outlet property="imageView2" destination="h0x-ZM-lsc" id="Ne2-Vh-nEI"/>
+                        <outlet property="imageView3" destination="sEf-y6-hRK" id="vJM-Cz-Jou"/>
+                        <outlet property="label" destination="Oeg-Lx-kr9" id="MmK-oL-ITU"/>
+                        <outlet property="picker" destination="eMM-kk-MGB" id="e2U-UG-n6i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cev-qY-9mw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493" y="-814"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Gw4-Y1-3wB">
+            <objects>
+                <viewController id="1vo-hQ-Xo9" customClass="CBViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U2a-8R-ywz"/>
+                        <viewControllerLayoutGuide type="bottom" id="5GQ-FC-RzI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eSA-QD-RiN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dau-NW-5xM">
+                                <rect key="frame" x="0.0" y="64" width="216" height="129"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1vo-hQ-Xo9" id="b86-wx-CSh"/>
+                                    <outlet property="delegate" destination="1vo-hQ-Xo9" id="Jiz-h2-BLn"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exc-In-G1o">
+                                <rect key="frame" x="253" y="115" width="30" height="30"/>
+                                <state key="normal" title="보기"/>
+                                <connections>
+                                    <action selector="getValue" destination="1vo-hQ-Xo9" eventType="touchUpInside" id="Km6-H4-cHI"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Ux-yj-PYd">
+                                <rect key="frame" x="6" y="207" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8qi-uI-xEw">
+                                <rect key="frame" x="110" y="207" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u0e-Kv-nLR">
+                                <rect key="frame" x="214" y="207" width="100" height="86"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iR7-ID-y3o">
+                                <rect key="frame" x="15" y="307" width="285" height="160"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView1" destination="3Ux-yj-PYd" id="rVO-4a-aZM"/>
+                        <outlet property="imageView2" destination="8qi-uI-xEw" id="UDP-2g-UUd"/>
+                        <outlet property="imageView3" destination="u0e-Kv-nLR" id="gUZ-4b-S83"/>
+                        <outlet property="label" destination="iR7-ID-y3o" id="iSg-Kl-Fw7"/>
+                        <outlet property="picker" destination="dau-NW-5xM" id="A5k-CB-9eU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnK-XC-iGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tIL-Gq-mlu">
+            <objects>
+                <viewController id="44O-fu-EPC" customClass="CNViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kZy-gQ-Fcm"/>
+                        <viewControllerLayoutGuide type="bottom" id="X3t-ih-GJ3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O5x-ay-BN5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dsC-6v-Pih">
+                                <rect key="frame" x="0.0" y="64" width="216" height="129"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="44O-fu-EPC" id="uEQ-yU-8TA"/>
+                                    <outlet property="delegate" destination="44O-fu-EPC" id="LHw-Mn-AfC"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58k-pA-2H5">
+                                <rect key="frame" x="254" y="112" width="30" height="30"/>
+                                <state key="normal" title="보기"/>
+                                <connections>
+                                    <action selector="getValue" destination="44O-fu-EPC" eventType="touchUpInside" id="9Rl-cv-vDK"/>
+                                    <action selector="getValue" destination="1vo-hQ-Xo9" eventType="touchUpInside" id="xup-Ox-41y"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6jw-2A-AMK">
+                                <rect key="frame" x="6" y="207" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TRA-LK-XiK">
+                                <rect key="frame" x="110" y="207" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udM-wW-bRR">
+                                <rect key="frame" x="214" y="207" width="100" height="86"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpy-FN-PZ3">
+                                <rect key="frame" x="18" y="301" width="285" height="160"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView1" destination="6jw-2A-AMK" id="KmP-z2-ioQ"/>
+                        <outlet property="imageView2" destination="TRA-LK-XiK" id="c4r-Ve-03G"/>
+                        <outlet property="imageView3" destination="udM-wW-bRR" id="xNM-Qp-O6I"/>
+                        <outlet property="label" destination="Jpy-FN-PZ3" id="WLJ-eV-OuP"/>
+                        <outlet property="picker" destination="dsC-6v-Pih" id="Ozn-6j-8bz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DRQ-gU-XKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344" y="164"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2NZ-lW-HjP">
+            <objects>
+                <viewController id="N9y-fM-xfo" customClass="KBViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hgD-n8-vis"/>
+                        <viewControllerLayoutGuide type="bottom" id="uSh-P2-x0M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="daj-rr-eHa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMO-Rw-Ipk">
+                                <rect key="frame" x="-1" y="64" width="216" height="129"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="N9y-fM-xfo" id="9MM-Fi-Z1D"/>
+                                    <outlet property="delegate" destination="N9y-fM-xfo" id="sxM-pq-3uI"/>
+                                </connections>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNs-Cx-IS4">
+                                <rect key="frame" x="7" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3x-WR-pbL">
+                                <rect key="frame" x="110" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zMQ-cu-nv3">
+                                <rect key="frame" x="213" y="206" width="100" height="86"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZd-7P-kNX">
+                                <rect key="frame" x="18" y="300" width="285" height="160"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3F2-Sn-EnZ">
+                                <rect key="frame" x="248" y="114" width="30" height="30"/>
+                                <state key="normal" title="보기"/>
+                                <connections>
+                                    <action selector="getValue" destination="N9y-fM-xfo" eventType="touchUpInside" id="Uzq-xd-MPG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView1" destination="oNs-Cx-IS4" id="lkX-7Z-fTT"/>
+                        <outlet property="imageView2" destination="w3x-WR-pbL" id="Tpp-SJ-ty2"/>
+                        <outlet property="imageView3" destination="zMQ-cu-nv3" id="Bv9-x1-CGx"/>
+                        <outlet property="label" destination="cZd-7P-kNX" id="OWw-vc-9l8"/>
+                        <outlet property="picker" destination="JMO-Rw-Ipk" id="qw0-1W-OSO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mB5-P2-NV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="712" y="930"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7oe-ii-aoY">
+            <objects>
+                <viewController id="ZLa-Dh-u9D" customClass="JBViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XbS-f1-bmV"/>
+                        <viewControllerLayoutGuide type="bottom" id="cLs-O1-9d3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N1W-tJ-MJF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sd7-qL-NdD">
+                                <rect key="frame" x="0.0" y="64" width="216" height="129"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZLa-Dh-u9D" id="kHn-aw-SFr"/>
+                                    <outlet property="delegate" destination="ZLa-Dh-u9D" id="FRr-bE-hVr"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44u-pM-HEL">
+                                <rect key="frame" x="265" y="114" width="30" height="30"/>
+                                <state key="normal" title="보기"/>
+                                <connections>
+                                    <action selector="getValue" destination="ZLa-Dh-u9D" eventType="touchUpInside" id="oac-25-qV8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKU-1p-ZNA">
+                                <rect key="frame" x="18" y="300" width="285" height="160"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9RN-3m-bNg">
+                                <rect key="frame" x="7" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBQ-en-1Qo">
+                                <rect key="frame" x="110" y="206" width="100" height="86"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3T4-rG-vYN">
+                                <rect key="frame" x="213" y="206" width="100" height="86"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView1" destination="9RN-3m-bNg" id="nZl-AV-Rup"/>
+                        <outlet property="imageView2" destination="sBQ-en-1Qo" id="sue-7P-9hq"/>
+                        <outlet property="imageView3" destination="3T4-rG-vYN" id="SGS-7G-gQF"/>
+                        <outlet property="label" destination="TKU-1p-ZNA" id="sV4-OI-kGv"/>
+                        <outlet property="picker" destination="Sd7-qL-NdD" id="84U-SL-gtx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJc-KK-HXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69" y="-185"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Y1T-tK-t8e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vSv-p7-6U0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iNZ-YC-eSa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HhI-Jj-lVr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fq-gJ-oPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chungbook.png" width="129" height="134"/>
+        <image name="chungnam.png" width="134" height="119"/>
+        <image name="gang.png" width="181" height="153"/>
+        <image name="gyungbook.png" width="149" height="163"/>
+        <image name="gyungnam.png" width="167" height="131"/>
+        <image name="jeju.png" width="73" height="42"/>
+        <image name="junrabook.png" width="125" height="97"/>
+        <image name="junranam.png" width="182" height="139"/>
+        <image name="seoul.png" width="149" height="159"/>
+    </resources>
+</document>
